@@ -1,0 +1,42 @@
+<%- include("_header") -%>
+        <form
+          class="row justify-content-center mb-4"
+          action="/delete/<%= model.User_ID %>"
+          method="post"
+          >
+          <div class="col-10 col-md-8 mb-3">
+            <label for="firstName">First Name</label>
+            <input
+              value="<%= model.FirstName %>"
+              class="form-control"
+              type="text"
+              disabled
+            />
+          </div>
+          <div class="col-10 col-md-8 mb-3">
+            <label for="lastName">Last Name</label>
+            <input
+              value="<%= model.LastName %>"
+              class="form-control"
+              type="text"
+              disabled
+            />
+          </div>
+          <div class="col-10 col-md-8 mb-3">
+            <label for="age">Age</label>
+            <input
+              value="<%= model.Age %>"
+              class="form-control"
+              type="text"
+              disabled
+            />
+          </div>
+          <div class="col-10 col-md-8">
+            <button class="btn btn-danger" type="submit">Delete</button>
+            <a href="/" class="btn btn-light">Canel</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

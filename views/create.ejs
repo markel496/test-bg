@@ -1,0 +1,43 @@
+<%- include("_header") -%>
+        <form
+          class="row justify-content-center mb-4"
+          action="/create"
+          method="post"
+          >
+          <div class="col-10 col-md-8 mb-3">
+            <label for="firstName">First Name</label>
+            <input
+              name="FirstName"
+              class="form-control"
+              type="text"
+              placeholder="Enter First Name"
+              autofocus
+            />
+          </div>
+          <div class="col-10 col-md-8 mb-3">
+            <label for="lastName">Last Name</label>
+            <input
+              name="LastName"
+              class="form-control"
+              type="text"
+              placeholder="Enter First Name"
+            />
+          </div>
+          <div class="col-10 col-md-8 mb-3">
+            <label for="age">Age</label>
+            <input
+              name="Age"
+              class="form-control"
+              type="text"
+              placeholder="Enter Age"
+            />
+          </div>
+          <div class="col-10 col-md-8">
+            <button class="btn btn-success" type="submit">Create</button>
+            <a href="/" class="btn btn-light add-btn">Canel</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

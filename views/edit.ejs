@@ -1,0 +1,47 @@
+<%- include("_header") -%>
+        <form
+          class="row justify-content-center mb-4"
+          action="/edit/<%= model.User_ID %>"
+          method="post"
+        >
+          <div class="col-10 col-md-8 mb-3">
+            <label for="firstName">First Name</label>
+            <input
+              name="FirstName"
+              class="form-control"
+              type="text"
+              value="<%= model.FirstName %>"
+              placeholder="Enter First Name"
+              autofocus
+              onfocus="var temp_value = this.value; this.value=''; this.value=temp_value"
+            />
+          </div>
+          <div class="col-10 col-md-8 mb-3">
+            <label for="lastName">Last Name</label>
+            <input
+              name="LastName"
+              class="form-control"
+              type="text"
+              value="<%= model.LastName %>"
+              placeholder="Enter First Name"
+            />
+          </div>
+          <div class="col-10 col-md-8 mb-3">
+            <label for="age">Age</label>
+            <input
+            name="Age"
+            class="form-control"
+            type="text"
+            value="<%= model.Age %>"
+            placeholder="Enter Age"
+            />
+          </div>
+          <div class="col-10 col-md-8">
+            <button type="submit" class="btn btn-warning">Edit</button>
+            <a class="btn btn-light" href="/">Canel</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

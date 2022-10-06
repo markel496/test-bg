@@ -1,0 +1,51 @@
+<%- include("_header") -%>
+      
+        <div class="col-12 col-md-10 mt-5">
+          <table class="table table-striped table-dark text-center">
+            <thead>
+              <tr class="align-middle">
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Age</th>
+                <th><a href="/create" class="btn btn-success btn-sm">Add</a></th>
+              </tr>
+            </thead>
+            <tbody>
+              <% for (const user of model) { %>
+              <tr class="align-middle">
+                <td><%=user.User_ID %></td>
+                <td><%=user.FirstName %></td>
+                <td><%=user.LastName %></td>
+                <td><%=user.Age %></td>
+                <td>
+                  <a href="/edit/<%= user.User_ID %>" class="btn btn-warning btn-sm">
+                    Edit
+                  </a>
+                  <a href="/delete/<%= user.User_ID %>" class="btn btn-danger btn-sm">
+                    Delete
+                  </a>
+                </td>
+              </tr>
+              <% } %> 
+              <!-- <tr>
+                <td>1</td>
+                <td>Ivan</td>
+                <td>Markelov</td>
+                <td>25</td>
+                <td>
+                  <button type="button" class="btn btn-warning btn-sm edit">
+                    Edit
+                  </button>
+                  <button type="button" class="btn btn-danger btn-sm delete">
+                    Delete
+                  </button>
+                </td>
+              </tr> -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
