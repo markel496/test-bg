@@ -33,17 +33,17 @@ db.run(sql_create, (err) => {
   console.log("Successful creation of the 'Users' table")
 })
 
-// Добавление элементов в бд
-// const sql_insert = `INSERT INTO Users (User_ID, FirstName, LastName, Age) VALUES
-//   (1, 'Ivan', 'Markelov', 25),
-//   (2, 'Vasya', 'Pupkin', 30),
-//   (3, 'Masha', 'Ivanova', 22);`
-// db.run(sql_insert, (err) => {
-//   if (err) {
-//     return console.error(err.message)
-//   }
-//   console.log('Successful creation of 3 users')
-// })
+//Добавление элементов в бд
+const sql_insert = `INSERT INTO Users (User_ID, FirstName, LastName, Age) VALUES
+  (1, 'Ivan', 'Markelov', 25),
+  (2, 'Vasya', 'Pupkin', 30),
+  (3, 'Masha', 'Ivanova', 22);`
+db.run(sql_insert, (err) => {
+  if (err) {
+    return console.error(err.message)
+  }
+  console.log('Successful creation of 3 users')
+})
 
 app.listen(PORT, () => {
   console.log('Server OK')
